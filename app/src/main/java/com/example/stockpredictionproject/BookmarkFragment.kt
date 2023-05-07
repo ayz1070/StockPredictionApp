@@ -30,6 +30,11 @@ class BookmarkFragment : Fragment() {
 
         stocks.add(Stock("애플"))
         stocks.add(Stock("삼성전자"))
+        stocks.add(Stock("애플"))
+        stocks.add(Stock("애플"))
+        stocks.add(Stock("애플"))
+        stocks.add(Stock("애플"))
+        stocks.add(Stock("애플"))
 
         // Inflate the layout for this fragment
         binding.recyclerView.layoutManager = LinearLayoutManager(context)

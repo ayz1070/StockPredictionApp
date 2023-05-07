@@ -10,6 +10,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.main_framelayout,SearchFragment())
+            .commit()
+
+
 
         binding.mainNav.setOnItemSelectedListener{ item ->
             val transaction = supportFragmentManager.beginTransaction()
@@ -18,7 +23,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.bookmark_nav -> transaction.replace(R.id.main_framelayout,BookmarkFragment())
                 R.id.mypage_nav -> transaction.replace(R.id.main_framelayout,MyPageFragment())
             }
-            transaction.commitAllowingStateLoss()
+            transaction.commit()
             true
         }
 
